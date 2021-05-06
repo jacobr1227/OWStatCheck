@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 public class infoGrabber {
     String [] heroList;
     {       //listing all of our hero identifiers for working thorough the HTML to get data separated
-        heroList=new String[] {"All Heroes", "Ana","Ashe","Baptiste","Bastion","Brigitte","D.Va","Doomfist","Echo","Genji","Hanzo","Junkrat","LÃºcio","McCree","Mei","Mercy","Moira","Orisa","Pharah","Reaper","Reinhardt","Roadhog","Sigma","Soldier: 76","Sombra","Symmetra","TorbjÃ¶rn","Tracer","Widowmaker","Winston","Wrecking Ball","Zarya","Zenyatta"};
+        heroList=new String[] {"All Heroes", "Ana","Ashe","Baptiste","Bastion","Brigitte","D.Va","Doomfist","Echo","Genji","Hanzo","Junkrat","Lúcio","McCree","Mei","Mercy","Moira","Orisa","Pharah","Reaper","Reinhardt","Roadhog","Sigma","Soldier: 76","Sombra","Symmetra","Torbjörn","Tracer","Widowmaker","Winston","Wrecking Ball","Zarya","Zenyatta"};
     }
     public ArrayList<String> values = new ArrayList<String>();  //our results list
     public ArrayList<String> heroConfirm = new ArrayList<String>(); //tools for backchecking data to make sure it's all there and skip unnecessary characters.
@@ -86,7 +86,7 @@ public class infoGrabber {
             found = found.replace("</td><td class=\"DataTable-tableColumn\">", ": "); //cleanup
             found = found.replace("</td></tr>", "");    //cleanup
             if(found.startsWith("rn Kills")) {
-                found =found.replace("rn Kills","TorbjÃ¶rn Kills"); //have to replace the accent because I couldn't get regex to include this
+                found =found.replace("rn Kills","Torbjörn Kills"); //have to replace the accent because I couldn't get regex to include this
             }
             if(found.startsWith("d:") || found.startsWith("d -")) {
                 found = found.replace("d", "Enemies EMP'd");    //same with the apostrophe since it's just one case.
